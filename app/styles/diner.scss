@@ -1,0 +1,511 @@
+
+// ---------------------------- DINER
+/* mixins media queries */
+@mixin breakpoint($point) {
+    @if $point == xl {
+        @media (max-width: 1365px) { @content; }
+    }
+    @if $point == lrg {
+        @media (max-width: 1199px) { @content; }
+    }
+    @else if $point == md {
+        @media (max-width: 991px) { @content; }
+    }
+    @else if $point == sm {
+        @media (max-width: 767px)  { @content; }
+    }
+    @else if $point == xs {
+        @media (max-width: 550px)  { @content; }
+    }
+    @else if $point == xxs {
+        @media (max-width: 400px)  { @content; }
+    }
+}
+/* font size variables */
+$txt-xxxl: 9.286em;
+
+$txt-xxl: 6em;
+
+$txt-xl: 3em;
+
+$txt-l: 1.714em;
+
+$txt-m: 1.143em;
+
+$txt-s: 1em;
+
+$txt-xs: 0.857em;
+
+/* font type variables */
+$txt-diner: 'Karla', 'sans-serif';
+
+body {
+    background: url("../media/bg-diner.jpg") repeat;
+}
+.diner {
+    /* --- GENERAL --- */
+	background: url("../media/bg-diner.jpg") repeat;
+    font-family: $txt-diner;
+    p {
+        font-family: $txt-diner;
+    }
+    h1, h2, h3, h4, h5 {
+        font-family: $txt-diner;
+    }
+    a {
+        color: #fff;
+    }
+
+    /* menú-principal */
+    .main-menu {
+    	font-family: $txt-diner;
+    	font-weight: 700;
+    	letter-spacing: 0.225em;
+        background: #fff;
+        opacity: 0.9;
+        text-transform: uppercase;
+    	a {
+    		color: #666666;
+            &:hover {
+                color: #33ccff;
+            }
+    	}
+    	li {
+            border-left: dashed 1px #666;
+            @include breakpoint(sm) { 
+                border-left: 0;  
+                border-bottom: solid 1px #cccccc;
+                text-align: center;  
+                .icon {
+                    display: none;
+                } 
+            }
+        }
+    }
+    .navbar-toggle {
+        .icon-bar {
+            background-color: #33ccff;
+        }
+    }
+
+    /* footer */
+    .main-footer {
+        background-color: #fff;
+        border-top: solid 3px #33ccff;
+        margin-top: 2px;
+        .zonak {
+            p {
+                color: #666666;
+            }
+            a {
+                color: #ff4800;
+                &:hover {
+                    color: #33ccff;
+                }
+            }
+        }
+        .links {
+            a {
+                color: #666;
+                font-weight: 700;
+                letter-spacing: 0.225em;
+                text-transform: uppercase;
+                &:hover {
+                    color: #33ccff;
+                }
+            }
+        }
+
+    }
+
+
+
+    /* --- HOME --- */
+    /* slider-principal */
+    .slider-principal {
+        .carousel-indicators {
+            li {
+                width: 15px;
+                height: 15px;
+                margin: 0 10px;
+                &.active {
+                    width: 15px;
+                    height: 15px;
+                    border: solid 1px #fff;
+                    margin: 0 10px;
+                }
+            }
+        }
+        .left {
+            img {
+                left: 0;
+            }
+        }
+        .right {
+            img {
+                right: 0;
+            }
+        }
+        .carousel-caption {
+            text-shadow: none;
+            bottom: 10%;
+            h3 {
+                margin: 10px 0 20px 0;
+                font-size: $txt-xxxl;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 0.7em;
+                letter-spacing: -0.04em;
+                @include breakpoint(md) { 
+                    font-size: $txt-xxl; 
+                }
+                @include breakpoint(sm) { 
+                    font-size: $txt-xl; 
+                }
+                @include breakpoint(xs) { 
+                    display: none;
+                }
+                span {
+                    font-weight: 400;
+                    display: block;
+                    font-size: 0.7em;
+                }
+            }
+
+        }
+        .deco {
+            @include breakpoint(xs) { 
+                display: none;
+            }
+            img {
+                width: auto;
+            }
+        }
+    }
+
+    /* banner-daportare */
+    .banner-daportare {
+        text-transform: uppercase;
+        background-color: #f64c07;
+        color: #fff;
+        @include breakpoint(xxs) { 
+            margin-top: 150px;
+        }
+        .txt {
+            padding-top: 25px;
+        }
+        .logo {
+            padding: 20px 15px;
+        }
+        a {
+            text-decoration: underline;
+        }
+        h4 {
+            font-size: 1.143em;
+            letter-spacing: 0.125em;
+        }
+    }
+
+    /* descripcion */
+    .descripcion {
+        background: url("../media/bg-blue-diner.png") repeat;
+        border-top: solid 10px #fff;
+        border-bottom: solid 10px #fff;
+        color: #fff;
+        padding: 50px 0;
+        @include breakpoint(sm) { 
+            padding: 30px 15px;
+        }
+        h1 {
+            text-transform: uppercase;
+            font-size: 2.857em;
+            margin-top: 0;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.714em;
+        }
+    }
+
+    /* grid fotos masonry */
+    #grid {
+        .more {
+            font-family: $txt-diner;
+            font-weight: 700;
+            font-size: 1.500em;
+            text-transform: uppercase;
+            letter-spacing: 0.125em;
+            a {
+                color: #33ccff;;
+            }
+        }
+        .wrapper-item {
+            &:hover {
+                .item {
+                    background: url("../media/bg-blue-diner.png") repeat;
+                }
+            }
+            
+        }
+    }
+
+
+    /* quotes */
+    .quotes {
+        background-color: #fff;
+        padding: 35px 0;
+        border-bottom: solid 3px #33ccff;
+        h4 {
+            color: #999;
+            font-style: italic;
+            font-size: 2.571em;
+        }
+        .referencia {
+            font-weight: 700;
+            color: #33ccff;
+            font-size: 0.5em;
+            font-style: normal;
+            display: block;
+            text-transform: uppercase;
+            padding-top: 25px;
+            letter-spacing: 0.125em;
+        }
+    }
+
+
+    /* mapa */
+    .mapa {
+        background-color: #33ccff;
+        color: #fff;
+        border-color: #33ccff;
+        .info {
+            background-color: #33ccff;
+            h2 {
+                text-transform: uppercase;
+                font-size: 1.500em;
+                text-align: center;
+                letter-spacing: 0.125em;
+            }
+            .deco {
+                height: 1px;
+                background-color: #fff;
+                display: block;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 0.857em;
+            }
+        }
+        .locaciones {
+            background-color: #33ccff;
+            h1 {
+                font-size: 1.143em;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 0.125em;
+                margin-bottom: 0;
+            }
+            p {
+                font-size: 1.286em;
+            }
+            .deco {
+                display: block;
+            }
+            .item {
+                @include breakpoint(sm) { 
+                    padding-bottom: 15px;
+                }
+                @include breakpoint(xs) { 
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+
+
+    /* --- RESERVAS --- */
+    .reservas {
+        background-color: #fff;
+        color: #666666;
+        p {
+            font-size: 1.071em;
+        }
+        a {
+            font-size: 1.286em;
+            color: #33ccff;
+            text-decoration: underline;
+            &:hover {
+                color: #ff4800;
+            }
+        }
+        h3 {
+            text-transform: uppercase;
+            color: #333333;
+            letter-spacing: 0.125em;
+            font-size: 1.643em;
+        }
+        .txt-caption {
+            font-size: 0.929em;
+            color: #999;
+        }
+        .form {
+            a {
+                font-size: 1em;
+            }
+            #fecha {
+                background: url("../media/icon-date-diner.png") no-repeat 95% center;
+            }
+            input, select {
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                border-color: #999999;
+                height: 45px;
+            }
+            textarea {
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                border-color: #999999;
+            }
+            label {
+                text-transform: uppercase;
+            }
+            select {
+                color: 333333; 
+                opacity: 1; 
+                text-transform: uppercase; 
+                font-size: 0.786em;
+                padding-top: 14px;
+            }
+            .form-control::-webkit-input-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .form-control:-moz-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .form-control::-moz-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .form-control:-ms-input-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .customSelect {
+                color: 333333; 
+                opacity: 1; 
+                text-transform: uppercase; 
+                font-size: 0.786em;
+                padding-top: 14px;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                border-color: #999999;
+                height: 45px;
+            }
+            .customSelectInner {
+                background:url("../media/icon-select-diner.png") no-repeat center right;
+                width: 100% !important;
+            }
+            .checkbox {
+                font-size: 0.786em;
+            }
+        }
+        .btn {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            background-color: #ff4800;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            border: 0;
+            padding: 15px 0;
+            letter-spacing: 0.125em;
+            font-size: 0.857em;
+            &:hover {
+                background-color: #33ccff;
+            }
+        }
+
+    }
+
+
+
+    /* --- MENÚ --- */
+    .menu {
+        background-color: #fff;
+        color: #666666;
+
+        /* slider categorías */
+        .categories-menu {
+            a {
+                background-color: #dbf6ff;
+                color: #33ccff;
+                letter-spacing: 0.125em;
+                font-weight: 700;
+                font-size: 0.857em;
+                &:hover {
+                    background-color: #33ccff;
+                    color: #fff;
+                    text-decoration: none;
+                }
+                &.active {
+                    background-color: #fff;
+                    color: #33ccff;
+                }
+            }
+            .mCS-dark-thick > .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+                background-color: #33ccff;
+            }
+            .mCSB_scrollTools {
+                a {
+                    &:hover {
+                        background-color: transparent;
+                        opacity: 0.7;
+                    }
+                }
+            }
+            
+        }
+
+        .main-content-menu {
+            .item {
+                border-top: dashed 1px #999999;
+                &:last-child {
+                    border-bottom: dashed 1px #999999;
+                    margin-bottom: 30px;
+                }
+            }
+            .name {
+                color: #333;
+                font-size: 1.429em;
+                font-weight: 700;
+            }
+            .info {
+                color: #666;
+                font-size: 1.071em;
+            }
+            .price {
+                color: #333;
+                font-weight: 700;
+                letter-spacing: 0.125em;
+            }
+        }
+
+
+
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
