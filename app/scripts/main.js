@@ -5,11 +5,6 @@ $(document).ready(function(){
 	/* jshint sub:true */
 
 
-    // CALENDARIO //
-    $('.datepicker').datepicker({
-	    language: 'es'
-	});
-
 	// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
 	$('.dropdown').on('show.bs.dropdown', function(){
 		$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -35,7 +30,7 @@ $(document).ready(function(){
 
 	// DATEPICKER //
 	$('.datepicker').datepicker({
-	    language: 'es'
+		language: 'es'
 	});
 
 	// CUSTOM SELECT //

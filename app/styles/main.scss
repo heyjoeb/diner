@@ -176,9 +176,9 @@ $txt-general: 'Karla', 'sans-serif';
             }
         }
         .wrapper-img {
-            background: #f64c07;
-            border-left: solid 1px #fff;
-            border-bottom: solid 1px #fff;
+            background: #fff;
+            border-left: solid 1px #000;
+            border-bottom: solid 1px #000;
             width: 120px;
             position: absolute;
             right: 0;
@@ -348,13 +348,13 @@ $txt-general: 'Karla', 'sans-serif';
 
         }
         .navbar-collapse {
-            @include breakpoint(sm) { 
+            @include breakpoint(md) { 
                 text-align: center; 
             }
             li {
                 &.mobile {
                     display: none;
-                    @include breakpoint(sm) { 
+                    @include breakpoint(md) { 
                         display: inline-block; 
                         border-bottom: 0; 
                     }
@@ -371,11 +371,7 @@ $txt-general: 'Karla', 'sans-serif';
         background-color: transparent;
     }
     .nav > li > a {
-        padding: 20px 30px;
-        @include breakpoint(md) { 
-            padding: 20px 15px;      
-        }
-
+        padding: 20px 15px;
     }
     .navbar-brand {
         height: auto;
@@ -447,7 +443,6 @@ $txt-general: 'Karla', 'sans-serif';
     .banner-daportare {
         margin: 10px;
         text-align: center;
-        background-color: #f64c07;
         color: #fff;
         @include breakpoint(xxs) { 
             margin-top: 150px;

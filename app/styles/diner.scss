@@ -72,7 +72,7 @@ body {
     	}
     	li {
             border-left: dashed 1px #666;
-            @include breakpoint(sm) { 
+            @include breakpoint(md) { 
                 border-left: 0;  
                 border-bottom: solid 1px #cccccc;
                 text-align: center;  
@@ -98,9 +98,9 @@ body {
                 color: #666666;
             }
             a {
-                color: #ff4800;
+                color: #33CCFF;
                 &:hover {
-                    color: #33ccff;
+                    color: #19a0cd;
                 }
             }
         }
@@ -186,7 +186,7 @@ body {
     /* banner-daportare */
     .banner-daportare {
         text-transform: uppercase;
-        background-color: #f64c07;
+        background-color: #000;
         color: #fff;
         @include breakpoint(xxs) { 
             margin-top: 150px;
@@ -338,7 +338,7 @@ body {
             color: #33ccff;
             text-decoration: underline;
             &:hover {
-                color: #ff4800;
+                color: #19a0cd;
             }
         }
         h3 {
@@ -409,7 +409,7 @@ body {
             -webkit-border-radius: 0;
             -moz-border-radius: 0;
             border-radius: 0;
-            background-color: #ff4800;
+            background-color: #2eb7e5;
             color: #fff;
             text-transform: uppercase;
             text-align: center;
@@ -418,7 +418,7 @@ body {
             letter-spacing: 0.125em;
             font-size: 0.857em;
             &:hover {
-                background-color: #33ccff;
+                background-color: #19a0cd;
             }
         }
 
