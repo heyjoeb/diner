@@ -67,7 +67,7 @@ body {
     	a {
     		color: #666666;
             &:hover {
-                color: #33ccff;
+                color: #009fe3;
             }
     	}
     	li {
@@ -84,21 +84,21 @@ body {
     }
     .navbar-toggle {
         .icon-bar {
-            background-color: #33ccff;
+            background-color: #009fe3;
         }
     }
 
     /* footer */
     .main-footer {
         background-color: #fff;
-        border-top: solid 3px #33ccff;
+        border-top: solid 3px #009fe3;
         margin-top: 2px;
         .zonak {
             p {
                 color: #666666;
             }
             a {
-                color: #33CCFF;
+                color: #009fe3;
                 &:hover {
                     color: #19a0cd;
                 }
@@ -111,7 +111,7 @@ body {
                 letter-spacing: 0.225em;
                 text-transform: uppercase;
                 &:hover {
-                    color: #33ccff;
+                    color: #009fe3;
                 }
             }
         }
@@ -186,13 +186,13 @@ body {
     /* banner-daportare */
     .banner-daportare {
         text-transform: uppercase;
-        background-color: #000;
+        background-color: #009fe3;
         color: #fff;
         @include breakpoint(xxs) { 
             margin-top: 150px;
         }
         .txt {
-            padding-top: 25px;
+            padding-top: 35px;
         }
         .logo {
             padding: 20px 15px;
@@ -237,7 +237,7 @@ body {
             text-transform: uppercase;
             letter-spacing: 0.125em;
             a {
-                color: #33ccff;;
+                color: #009fe3;;
             }
         }
         .wrapper-item {
@@ -255,7 +255,7 @@ body {
     .quotes {
         background-color: #fff;
         padding: 35px 0;
-        border-bottom: solid 3px #33ccff;
+        border-bottom: solid 3px #009fe3;
         h4 {
             color: #999;
             font-style: italic;
@@ -263,7 +263,7 @@ body {
         }
         .referencia {
             font-weight: 700;
-            color: #33ccff;
+            color: #009fe3;
             font-size: 0.5em;
             font-style: normal;
             display: block;
@@ -276,11 +276,11 @@ body {
 
     /* mapa */
     .mapa {
-        background-color: #33ccff;
+        background-color: #009fe3;
         color: #fff;
-        border-color: #33ccff;
+        border-color: #009fe3;
         .info {
-            background-color: #33ccff;
+            background-color: #009fe3;
             h2 {
                 text-transform: uppercase;
                 font-size: 1.500em;
@@ -298,7 +298,7 @@ body {
             }
         }
         .locaciones {
-            background-color: #33ccff;
+            background-color: #009fe3;
             h1 {
                 font-size: 1.143em;
                 text-transform: uppercase;
@@ -335,7 +335,7 @@ body {
         }
         a {
             font-size: 1.286em;
-            color: #33ccff;
+            color: #009fe3;
             text-decoration: underline;
             &:hover {
                 color: #19a0cd;
@@ -409,7 +409,7 @@ body {
             -webkit-border-radius: 0;
             -moz-border-radius: 0;
             border-radius: 0;
-            background-color: #2eb7e5;
+            background-color: #009fe3;
             color: #fff;
             text-transform: uppercase;
             text-align: center;
@@ -435,22 +435,22 @@ body {
         .categories-menu {
             a {
                 background-color: #dbf6ff;
-                color: #33ccff;
+                color: #009fe3;
                 letter-spacing: 0.125em;
                 font-weight: 700;
                 font-size: 0.857em;
                 &:hover {
-                    background-color: #33ccff;
+                    background-color: #009fe3;
                     color: #fff;
                     text-decoration: none;
                 }
                 &.active {
                     background-color: #fff;
-                    color: #33ccff;
+                    color: #009fe3;
                 }
             }
             .mCS-dark-thick > .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-                background-color: #33ccff;
+                background-color: #009fe3;
             }
             .mCSB_scrollTools {
                 a {
@@ -490,6 +490,15 @@ body {
 
 
         
+    }
+    .mCSB_scrollTools .mCSB_buttonUp,
+    .mCSB_scrollTools .mCSB_buttonDown,
+    .mCSB_scrollTools .mCSB_buttonLeft,
+    .mCSB_scrollTools .mCSB_buttonRight{
+        background-image:url(../media/mCSB_buttons.png);
+        background-repeat:no-repeat;
+        opacity:0.4;
+        filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
     }
     
 }
