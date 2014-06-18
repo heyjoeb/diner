@@ -40,11 +40,11 @@ $txt-xs: 0.857em;
 $txt-diner: 'Karla', 'sans-serif';
 
 body {
-    background: url("../media/bg-diner.jpg") repeat;
+    background: url("../media/bg-gray-diner.png") repeat;
 }
 .diner {
     /* --- GENERAL --- */
-	background: url("../media/bg-diner.jpg") repeat;
+	background: url("../media/bg-gray-diner.png") repeat;
     font-family: $txt-diner;
     p {
         font-family: $txt-diner;
@@ -62,7 +62,6 @@ body {
     	font-weight: 700;
     	letter-spacing: 0.225em;
         background: #fff;
-        opacity: 0.9;
         text-transform: uppercase;
     	a {
     		color: #666666;
@@ -186,18 +185,21 @@ body {
     /* banner-daportare */
     .banner-daportare {
         text-transform: uppercase;
-        background-color: #009fe3;
-        color: #fff;
+        background-color: #fff;
+        color: #1d1d1d;
+        border: solid 2px #1d1d1d;
         @include breakpoint(xxs) { 
             margin-top: 150px;
         }
         .txt {
-            padding-top: 35px;
+            padding-top: 20px;
         }
         .logo {
-            padding: 20px 15px;
+            padding: 0 15px;
         }
         a {
+            text-decoration: underline;
+            color: #1d1d1d;
             text-decoration: underline;
         }
         h4 {
@@ -208,17 +210,18 @@ body {
 
     /* descripcion */
     .descripcion {
-        background: url("../media/bg-blue-diner.png") repeat;
-        border-top: solid 10px #fff;
-        border-bottom: solid 10px #fff;
-        color: #fff;
+        background: #fff;
+        color: #1d1d1d;
         padding: 50px 0;
+        margin: 40px 0;
+        border: solid 2px #00a1e5;
+        text-align: center;
         @include breakpoint(sm) { 
             padding: 30px 15px;
         }
         h1 {
             text-transform: uppercase;
-            font-size: 2.857em;
+            font-size: 2.143em;
             margin-top: 0;
         }
         h2 {
@@ -279,8 +282,12 @@ body {
         background-color: #009fe3;
         color: #fff;
         border-color: #009fe3;
+        .wrapper-content-mapa {
+            padding-left: 0;
+            background: #fff;
+        }
         .info {
-            background-color: #009fe3;
+            color: #000;
             h2 {
                 text-transform: uppercase;
                 font-size: 1.500em;
@@ -328,6 +335,104 @@ body {
 
     /* --- RESERVAS --- */
     .reservas {
+        background-color: #fff;
+        color: #666666;
+        p {
+            font-size: 1.071em;
+        }
+        a {
+            font-size: 1.286em;
+            color: #009fe3;
+            text-decoration: underline;
+            &:hover {
+                color: #19a0cd;
+            }
+        }
+        h3 {
+            text-transform: uppercase;
+            color: #333333;
+            letter-spacing: 0.125em;
+            font-size: 1.643em;
+        }
+        .txt-caption {
+            font-size: 0.929em;
+            color: #999;
+        }
+        .form {
+            a {
+                font-size: 1em;
+            }
+            #fecha {
+                background: url("../media/icon-date-diner.png") no-repeat 95% center;
+            }
+            input, select {
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                border-color: #999999;
+                height: 45px;
+            }
+            textarea {
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                border-color: #999999;
+            }
+            label {
+                text-transform: uppercase;
+            }
+            select {
+                color: 333333; 
+                opacity: 1; 
+                text-transform: uppercase; 
+                font-size: 0.786em;
+                padding-top: 14px;
+            }
+            .form-control::-webkit-input-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .form-control:-moz-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .form-control::-moz-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .form-control:-ms-input-placeholder { color: #333333; opacity: 1; text-transform: uppercase; font-size: 0.786em; }
+            .customSelect {
+                color: 333333; 
+                opacity: 1; 
+                text-transform: uppercase; 
+                font-size: 0.786em;
+                padding-top: 14px;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                border-radius: 0;
+                border-color: #999999;
+                height: 45px;
+            }
+            .customSelectInner {
+                background:url("../media/icon-select-diner.png") no-repeat center right;
+                width: 100% !important;
+            }
+            .checkbox {
+                font-size: 0.786em;
+            }
+        }
+        .btn {
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+            background-color: #009fe3;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            border: 0;
+            padding: 15px 0;
+            letter-spacing: 0.125em;
+            font-size: 0.857em;
+            &:hover {
+                background-color: #19a0cd;
+            }
+        }
+
+    }
+
+    /* --- CONTACTO --- */
+    .contacto {
         background-color: #fff;
         color: #666666;
         p {

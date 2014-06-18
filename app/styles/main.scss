@@ -78,34 +78,82 @@ $txt-general: 'Karla', 'sans-serif';
     a {
         color: #fff;
     }
-    .dropdown-menu {
-        background: #0b1a21;
-        font-size: 1em;
-        li {
-            a {
-                padding: 5px 15px;
-                color: #fff;
-                &:hover {
-                    background: #2c3438;
-                }
-            }
-        }
-    }
+    
     .wrapper-select-restaurantes {
         padding-right: 0;
         @include breakpoint(sm) { 
             display: none;
         }
         .logo-zona-k {
-            border-right: solid 1px #fff;
             padding: 10px 0;
-            width: 90px;
+            width: 80px;
             float: left;
         }
         .select-restaurantes {
             float: left;
-            padding: 10px 0 10px 20px;
+            padding: 10px 15px;
+            border-right: solid 1px #fff;
         }
+        // ajuste dropdown menu full-width - bootstrap override
+    .dropdown-menu {
+        background: #0b1a21;
+        font-size: 1em;
+        position: fixed !important;
+        top: 35px;
+        width: 100%;
+        border-top: solid 1px #353535;
+        border-radius: 0;
+        border-bottom: solid 1px #353535;
+        padding-bottom: 20px;
+        h1 {
+            font-family: $txt-general;
+            font-size: 1.8ems;
+            text-align: center;
+        }
+        h2 {
+            font-family: $txt-general;
+            font-size: 1em;
+            text-transform: none;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        li {
+            border-bottom: solid 1px #353535;
+            a {
+                padding: 15px 0;
+                color: #fff;
+                display: inline-block;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .info-drop {
+            @include breakpoint(md) { 
+                text-align: center;            }
+            li {
+                &:last-child {
+                    border: 0;
+                }
+            }
+        }
+        .btn {
+            font-size: 1em;
+        }
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+        .btn-blanco {
+            background: #fff;
+            color: #0b1a21;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+    }
     }
 
 
@@ -114,7 +162,6 @@ $txt-general: 'Karla', 'sans-serif';
         text-align: right;
         border-right: dashed 1px #fff;
         @include breakpoint(xs) { 
-            padding-bottom: 25px;
             padding-left: 5px;
             padding-right: 5px;
         }
@@ -129,9 +176,13 @@ $txt-general: 'Karla', 'sans-serif';
         .dropdown-menu {
             left: auto;
             right: 0;
+            li {
+                &:last-child {
+                    border: 0;
+                }
+            }
             @include breakpoint(xs) { 
                 left: 0;
-                width: 295px;
             }
         }
         .dropdown {
@@ -150,14 +201,15 @@ $txt-general: 'Karla', 'sans-serif';
 
     }
     .wrapper-link-daportare {
-        padding: 10px 5px;
+        padding: 10px 0;
         position: relative;
         text-align: right;
         @include breakpoint(xs) { 
             text-align: center;
         }
         span {
-            padding-right: 45%;
+            color: #1a1919;
+            padding-right: 5px;
             @include breakpoint(lrg) {
                 padding-right: 0;
                 display: block;
@@ -179,14 +231,12 @@ $txt-general: 'Karla', 'sans-serif';
             background: #fff;
             border-left: solid 1px #000;
             border-bottom: solid 1px #000;
-            width: 120px;
             position: absolute;
             right: 0;
             top: 0;
-            height: 45px;
             z-index: 5;
             text-align: center;
-            padding-top: 10px;
+            padding: 5px 10px;
             @include breakpoint(xs) { 
                 display: none;
             }
@@ -196,9 +246,7 @@ $txt-general: 'Karla', 'sans-serif';
             @include breakpoint(xs) { 
                 display: inline-block;
                 text-decoration: underline;
-                &:hover {
-                    color: #f64c07;
-                }
+                color: #fff;
             }
         }
 
@@ -513,10 +561,174 @@ $txt-general: 'Karla', 'sans-serif';
                     padding-left: 0;
                 }
             }
-            .wrapper-fecha {
+            .wrapper-tipo {
                 padding-left: 0;
                 @include breakpoint(sm) { 
                     padding-right: 0;
+                }
+            }
+            .wrapper-fecha {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .wrapper-jornada {
+                padding-left: 0;
+                @include breakpoint(sm) { 
+                    padding-right: 0;
+                }
+            }
+            .wrapper-hora {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .wrapper-nombres {
+                padding-left: 0;
+                @include breakpoint(sm) { 
+                    padding-right: 0;
+                }
+            }
+            .wrapper-apellidos {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .wrapper-invitados {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .checkbox {
+                margin: 20px 0;
+                input {
+                    height: auto;
+                }
+            }
+        }
+        .info {
+            text-align: center;
+            @include breakpoint(sm) { 
+                padding-top: 30px;
+            }
+        }
+        .intro {
+            text-align: left;
+        }
+        .info-pedidos {
+            margin-top: 10px;
+        }
+
+        .links {
+            text-align: right;
+            padding: 0;
+            @include breakpoint(md) { 
+                text-align: center;
+            }
+        }
+        .logo {
+            text-align: left;
+            padding-left: 10px;
+            @include breakpoint(md) { 
+                text-align: center;
+                padding-top: 5px;
+            }
+        }
+        .info-reservas {
+            margin-top: 40px;
+        }
+        .info-eventos {
+            margin-top: 40px;
+        }
+        .info-servicio-cliente {
+            margin-top: 40px;
+        }
+        .mensaje {
+            margin-top: 40px;
+        }
+
+    }
+
+     /* --- CONTACTO --- */
+    .contacto {
+        padding: 20px;
+        h3 {
+            margin-bottom: 5px;
+        }
+        .txt-caption {
+            display: block;
+        }
+        .form {
+            textarea {
+                min-height: 135px;
+                resize: none;
+            }
+            .btn {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .wrapper-captcha {
+                padding-left: 0;
+                @include breakpoint(sm) { 
+                    padding-right: 0;
+                }
+            }
+            .wrapper-respuesta-captcha {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .wrapper-tipo {
+                padding-left: 0;
+                @include breakpoint(sm) { 
+                    padding-right: 0;
+                }
+            }
+            .wrapper-fecha {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .wrapper-jornada {
+                padding-left: 0;
+                @include breakpoint(sm) { 
+                    padding-right: 0;
+                }
+            }
+            .wrapper-telefono {
+                padding-left: 0;
+                @include breakpoint(sm) { 
+                    padding-right: 0;
+                }
+            }
+            .wrapper-ciudad {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .wrapper-hora {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
+                }
+            }
+            .wrapper-nombres {
+                padding-left: 0;
+                @include breakpoint(sm) { 
+                    padding-right: 0;
+                }
+            }
+            .wrapper-apellidos {
+                padding-right: 0;
+                @include breakpoint(sm) { 
+                    padding-left: 0;
                 }
             }
             .wrapper-invitados {
