@@ -20,6 +20,7 @@
     @else if $point == xxs {
         @media (max-width: 400px)  { @content; }
     }
+    
 }
 /* font size variables */
 $txt-xxxl: 9.286em;
